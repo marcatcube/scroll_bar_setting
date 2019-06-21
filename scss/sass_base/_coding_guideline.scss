@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+@keyframes cloak-in {
+  0% {
+    opacity: 0;
+    margin-top:-10px;
+  }
+  100% {
+     opacity: 1;
+     margin-top:0;
+  }
+}
+#page_top {
+  animation: cloak-in 0.75s;
+}
+#page_top[v-cloak] {
+  opacity: 0;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+}
+ul,li,dd,dt,dh {
+    list-style: none;
+}
+svg {
+    display: block;
+}
+
+.pc_only {
+    @include pc_only();
+}
+.sp_only {
+    @include sp_only();
+}
+.test {
+    background: url("#{$imgpass}/back");
+}
+.pc_display_flex_center {
+    @include media($pc){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include media($tab) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include media($sp) {
+        display: none;
+    }
+}
+.sp_display_flex_center {
+    @include media($pc){
+        display: none;
+    }
+    @include media($tab) {
+        display: none;
+    }
+    @include media($sp) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.wapper {
+    @include wapper_setting();
+    
+}
+
+.display_flex_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display_flex_stretch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.display_row {
+    flex-flow: row wrap;
+}
+body {
+    font-family: 'Noto Sans JP',sans-serif;
+    visibility: hidden;
+    @include imgwidth();
+    @include rs_font_size();
+}
+.wf-active body {
+    visibility: visible;
+}
+#mintyou {
+    font-family:"Noto Serif JP",serif;
+    visibility: hidden;
+}
+.wf-active #mintyou {
+    visibility: visible;
+}
+
+.dancing {
+    font-family: 'Dancing Script', cursive;
+    visibility: hidden;
+}
+.wf-active .dancing {
+    visibility: visible;
+}
+.oswald {
+    font-family: 'Oswald', sans-serif;
+    visibility: hidden;
+}
+.wf-active .oswald {
+    visibility: visible;
+}
+.t_center {
+    text-align: center;
+}
+@for $i from 0 through 30 {
+    $list : $i * 10;
+    .margin_#{$list} {
+        @include marginPercent(1920 , $list , auto , 0 , auto );
+    }
+    .padding_top_#{$i * 10} {
+        @include paddingPercent(1920 , $list , 0 , 0 , 0);
+    }
+    .padding_top_bottom_#{$i * 10} {
+        @include paddingPercent(1920 , $list , 0 , $list , 0);
+    }
+}
+
+.kinout_text {
+  text-align: justify;
+  text-justify: inter-ideograph;    
+}

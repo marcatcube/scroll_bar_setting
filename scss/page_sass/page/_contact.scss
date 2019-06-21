@@ -1,0 +1,287 @@
+@charset "utf-8";
+@import '../../sass_base/mixin';
+@import '../../sass_base/animate';
+@import '../../sass_base/icon_arrow';
+
+//ページ上部
+.contact_upper_pref {
+    text-align: center;
+    margin: 5% 0;
+    @include rs_font_size(22px,2.2448979591836733vw,3.4375vw);
+    //フォント（px）【PC】:22pxpx |【Tab】22px |【sp】 22px 
+    //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+    p {
+        text-align: center;
+        margin: 2% 0;
+
+    }
+    .contact_pref_step_img {
+        margin: 5% 0;
+        @include imgwidth();
+    }
+}
+//お問い合せ//フォーム概要
+.main_contents .form_section .form_section_table {    
+    margin: 3% 0 0 0;
+    width: 100%;
+    background: $main_color;
+    color: $sub_color;
+    table-layout: fixed;
+    td {
+        width: 70%;
+        vertical-align: top;
+    }
+    th {
+        width: 30%;
+        @include outer-container(100%);
+        vertical-align: middle;
+        text-align: left;
+        border-right:  1px solid #FFF;
+        @include media($sp) {
+            border-right: none;
+        }
+    }
+    td,th {
+        padding: 1.5% 2% 1.25% 2%;
+        border-bottom: 1px solid #FFF;
+    }
+    td,tr,tbody,th {
+        @include media($sp) {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+//フォームth部分
+.main_contents .form_section .form_section_table th {
+    @include rs_font_size(19.2px,1.9591836734693877vw,3vw);
+    //フォント（px）【PC】:19.2pxpx |【Tab】19.2px |【sp】 19.2px 
+    //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+    .title {
+        padding: 0.25% 0;
+        color: #FFF;
+        float: left;
+        font-weight: normal;
+    }
+    .hissu {
+        float: right;
+        padding: 1% 3%;
+        background: $sub_sub_color;
+        color: #000;
+        font-weight: normal;
+    }
+}
+//フォーム入力部分
+.main_contents .form_section .form_section_table td {
+    @include rs_font_size(19.2px,1.9591836734693877vw,3vw);
+    //フォント（px）【PC】:19.2pxpx |【Tab】19.2px |【sp】 19.2px 
+    //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+}
+//フォーム入力部分(ラジオボタン項目)
+.main_contents .form_section .form_section_table td .contact_radio {
+    @include outer-container(100%);
+    .mwform-radio-field {
+        width: 30%;
+        margin: 0 2% 1% 0;
+        float: left;
+    }
+}
+.main_contents .form_section .form_section_table td .entory_radio {
+    @include outer-container(100%);
+    .mwform-radio-field {
+        width: 40%;
+        margin: 0 2% 1% 0;
+        float: left;
+    }
+}
+//フォーム入力部分(名前)
+.main_contents .form_section .form_section_table td .name_table {
+    display: table;
+    width: 80%;
+    .title_pref {
+        display: table-cell;
+        width: 10%;
+        vertical-align: middle;
+        text-align: left;
+    }
+    .input_box {
+        display: table-cell;
+        width: 40%;
+        vertical-align: middle;
+        input {
+            padding: 1%;
+            width: 80%;
+        }
+    }
+}
+//フォーム入力部分（生年月日）
+.main_contents .form_section .form_section_table td .birthday_wapper {
+    display: table;
+    width: 77%;
+    .title_pref {
+        display: table-cell;
+        width: 8%;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .input_box {
+        display: table-cell;
+        width: 25%;
+        vertical-align: middle;
+        input {
+            padding: 1%;
+            width: 90%;
+        }
+    }
+}
+//フォーム入力部分（都道府県）
+.main_contents .form_section .form_section_table td .address_table_wapper {
+    display: table;
+    width: 100%;
+    margin: 0 0 2% 0;
+    table-layout: fixed;
+    .title_address {
+        width: 30%;
+        display: table-cell;
+    }
+    .pref_address {
+        width: 65%;
+        display: table-cell;
+        input {
+            width: 100%;
+            padding: 1%;
+        }
+    }
+}
+.main_contents .form_section .form_section_table td .address_table_wapper ul {
+    display: table;
+    width: 100%;
+    li {
+        display:table-cell;
+
+        &.post_num_01 {
+            width: 4%;
+        }
+        &.post_num_02 {
+            width: 6%
+        }
+        &.post_num_pref {
+            width: 2%;
+            text-align: center;
+        }
+        &.post_pref_list {
+            width: 10%;
+            text-align: center;
+            a {
+                color: #FFF;
+                @include rs_font_size(16px,1.6326530612244898vw,2.5vw);
+                //フォント（px）【PC】:16pxpx |【Tab】16px |【sp】 16px 
+                //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+            }
+        }
+    }
+}
+
+
+//フォーム入力部分(電話番号)
+.main_contents .form_section .form_section_table td .tel_wapper {
+    width: 80%;
+    input {
+        width: 30%;
+        padding: 1%;
+    }
+}
+//メールアドレス
+.main_contents .form_section .form_section_table td #mail_address {
+    padding: 1%;
+    width: 100%;
+}
+//お問い合せ内容
+.main_contents .form_section .form_section_table td .textarea {
+    padding: 1%;
+    width: 100%;
+}
+
+//フォームした文章
+.main_contents .form_section .alert_pref {
+    margin: 5% 0;
+    text-align: center;
+    @include rs_font_size(22px,2.2448979591836733vw,3.4375vw);
+    //フォント（px）【PC】:22pxpx |【Tab】22px |【sp】 22px 
+    //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+    a {
+        color: $main_color;
+    }
+}
+//送信画面ボタン
+.main_contents .form_section .go_confirm_wapper {
+    button {
+        width: 30%;
+        margin: 3% auto 6% auto;
+        @include buttontype04(#000,#0066cc,3px,#FFF,#FFF,#0066cc,#000); display:block;
+        @include rs_font_size(20px,2.0408163265306123vw,3.125vw);
+        //フォント（px）【PC】:20pxpx |【Tab】20px |【sp】 20px 
+        //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+        padding: 1.25% 0 1% 0;
+        font-weight: 600;
+        @include media($sp) {
+            width: 60%;
+            padding: 2.25% 0 2% 0;
+        }
+    }
+}
+//戻るボタンと送信ボタン
+.main_contents .form_section .go_thanks_back_wapper {
+    position: relative;
+    margin: 3% auto 6% auto;
+    .back_wapper {
+        button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20%;
+            @include buttontype04(#FFF,#000,1px,#000,#000,#000,#FFF); display:block;
+            @include rs_font_size(20px,2.0408163265306123vw,3.125vw);
+            //フォント（px）【PC】:20pxpx |【Tab】20px |【sp】 20px 
+            //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+            padding: 1.25% 0 1% 0;
+            @include media($sp) {
+                width: 40%;
+                margin: 0 auto 3% auto;
+                position: relative;
+                top: auto;
+                left: auto;
+                padding: 2.25% 0 2% 0;
+                font-weight: 600;
+            }
+        }
+
+    }
+    .send_wapper {
+        margin: 0 auto;
+        button {
+            width: 30%;
+            margin: 3% auto 6% auto;
+            @include buttontype04(#000,#0066cc,3px,#FFF,#FFF,#0066cc,#000); display:block;
+            @include rs_font_size(20px,2.0408163265306123vw,3.125vw);
+            //フォント（px）【PC】:20pxpx |【Tab】20px |【sp】 20px 
+            //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+            padding: 1.25% 0 1% 0;
+            @include media($sp) {
+                width: 60%;    
+                padding: 2.25% 0 2% 0;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.contact_upper_pref .pref_thanks {
+    @include rs_font_size(20px,2.0408163265306123vw,3.125vw);
+    //フォント（px）【PC】:20pxpx |【Tab】20px |【sp】 20px 
+    //設定サイズ（px）【PC】:1920px |【Tab】980px |【sp】 640px
+    p {
+        margin: 2% 0;
+        line-height: 175%;
+    }
+}
